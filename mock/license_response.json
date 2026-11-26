@@ -1,0 +1,16 @@
+{
+  "status": "active",
+  "tier": "enterprise",
+  "license_key": "NEO-PASS-LOCAL-BYPASS",
+  "expires_at": "2099-12-31T23:59:59Z",
+  "features": {
+    "advanced_analytics": true,
+    "priority_support": true,
+    "custom_domains": true,
+    "api_access": true
+  },
+  "user_id": "local_bypass_user",
+  "org_id": "local_bypass_org",
+  "is_trial": false,
+  "grace_period_active": false
+}
