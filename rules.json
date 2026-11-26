@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "neocolab\\.com/telemetry|neocolab\\.com/analytics|neocolab\\.com/heartbeat|neocolab\\.com/tracking",
+      "resourceTypes": ["xmlhttprequest", "script", "other", "main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/mock/license_response.json" } },
+    "condition": {
+      "urlFilter": "neocolab\\.com/api/v[0-9]+/license/validate|neocolab\\.com/api/v[0-9]+/entitlements|neocolab\\.com/api/v[0-9]+/subscription",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/mock/feature_flags.json" } },
+    "condition": {
+      "urlFilter": "neocolab\\.com/api/v[0-9]+/config|neocolab\\.com/api/v[0-9]+/feature-flags|neocolab\\.com/api/v[0-9]+/settings",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  }
+]
